@@ -11,11 +11,14 @@
             <div class="card-body">
               <h5 class="card-title">{{data.title}}</h5>
               <p class="card-text">{{data.description}}</p>
+              <div class="a d-flex ">
+                <p style="padding: 5px;">{{data.rating.rate}} </p>
+                <i class="bi bi-star-fill" style="padding: 5px;"></i>
+                <p style="padding: 5px;">{{data.rating.count}} reviews </p>
+              </div>
+
               <span class="a-price-whole"><b>₹{{data.price}}</b></span>
-              <i class="bi bi-star-fill"></i>
-              @for (item of data.rating; track $index) {
-                
-              }
+              
               <a href="#" class="btn btn-primary">Buy Now</a>
             </div>
           </div>
