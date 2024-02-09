@@ -1,8 +1,8 @@
-<div class="bod">
-    <!-- <h2 class="text-center"><u><strong>E-Kart</strong></u></h2> -->
-    <app-nav></app-nav>
-    <div class="container">
-      <div class="row">
+<div class="whole">
+
+  <app-nav></app-nav>
+  <div class="container">
+    <div class="row">
     
         @for (item of data; track $index) {
           <div class="col-3">
@@ -12,11 +12,12 @@
               <div class="card-body">
                 <h5 class="card-title">{{item.title}}</h5>
                 <p class="card-text ">{{item.description|slice : 0 : 100}}...</p>
-                <a href="#" class="btn btn-primary">${{item.price}}</a>
+                <a routerLink="{{item.id}}"  class="btn btn-primary">${{item.price}}</a>
               </div>
-        </div>
+            </div>
+          </div>
+        }
       </div>
-    }
     </div>
-    </div>
-    </div>
+    <app-footer></app-footer>
+  </div>

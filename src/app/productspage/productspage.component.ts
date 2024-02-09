@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { NavComponent } from '../nav/nav.component';
 import { ApiService } from '../api.service';
 import { SlicePipe } from '@angular/common';
+import { NavComponent } from '../components/nav/nav.component';
+import { FooterComponent } from '../footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-productspage',
   standalone: true,
-  imports: [NavComponent,SlicePipe],
+  imports: [NavComponent,SlicePipe,FooterComponent,RouterLink],
   templateUrl: './productspage.component.html',
   styleUrl: './productspage.component.css'
 })

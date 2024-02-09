@@ -1,0 +1,24 @@
+<div class="whole">
+
+    <app-nav></app-nav>
+    <div class="container d-flex">
+      <div class="card " style="width: 18rem;">
+        <div class="card-body">
+        <img src="{{data.image}}" class="card-img-top" alt="...">
+        </div>  
+      </div>
+          <div class="card ">
+            <div class="card-body">
+              <h5 class="card-title">{{data.title}}</h5>
+              <p class="card-text">{{data.description}}</p>
+              <span class="a-price-whole"><b>₹{{data.price}}</b></span>
+              <i class="bi bi-star-fill"></i>
+              @for (item of data.rating; track $index) {
+                
+              }
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+      </div>
+      <app-footer></app-footer>
+    </div>
